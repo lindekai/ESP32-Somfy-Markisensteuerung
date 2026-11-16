@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="680" viewBox="0 0 1140 680" role="img" aria-labelledby="t">
+  <title id="t">Verdrahtung ESP32-DevKit mit CC1101</title>
+  <style>
+    svg { --bg:#FFFFFF; --fg:#1B1F24; --muted:#6B7280; --board:#1E2935; --chip:#3B4B5E; --cc:#2F7D4F; --pin:#4B5563; --pinon:#F2A541; --warn:#B91C1C; --gnd:#111827; }
+    @media (prefers-color-scheme: dark) { svg { --bg:#0D1117; --fg:#E9ECF0; --muted:#9AA4B2; --board:#243140; --chip:#4A5D73; --cc:#2E8B57; --pin:#6B7280; --pinon:#F2A541; --warn:#F87171; --gnd:#E5E7EB; } }
+    text { font-family: ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .bg { fill: var(--bg); }
+    .board { fill: var(--board); } .chip { fill: var(--chip); } .cc { fill: var(--cc); }
+    .pin { fill: var(--pin); } .pin-on { fill: var(--pinon); stroke:#fff; stroke-width:1.5; }
+    .t-pin { font-size: 11px; fill: #8A94A3; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .t-pin-on { font-size: 12px; fill: #FFFFFF; font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .t-pin-cc { font-size: 13px; fill: #FFFFFF; font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .t-chip { font-size: 10px; fill: #DCE3EA; font-weight: 600; }
+    .t-head { font-size: 16px; font-weight: 700; fill: var(--fg); }
+    .t-leg { font-size: 14px; fill: var(--fg); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .t-small { font-size: 12px; fill: var(--muted); }
+    .t-warn { font-size: 13px; font-weight: 700; fill: var(--warn); }
+    .wire { fill: none; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ant { fill: none; stroke: var(--muted); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+  </style>
+  <rect width="1140" height="680" rx="16" class="bg"/>
+  <rect x="350" y="70" width="200" height="528" rx="12" class="board"/>
+  <rect x="400" y="78" width="100" height="26" rx="4" class="chip"/><text x="450.0" y="96" class="t-chip" text-anchor="middle">ESP32-WROOM-32</text>
+  <rect x="428.0" y="582" width="44" height="22" rx="4" class="chip"/><text x="450.0" y="620" class="t-small" text-anchor="middle">Micro-USB</text>
+  <circle cx="364" cy="120" r="5" class="pin-on"/><text x="376" y="124" class="t-pin-on">3V3</text>
+  <circle cx="364" cy="144" r="5" class="pin"/><text x="376" y="148" class="t-pin">EN</text>
+  <circle cx="364" cy="168" r="5" class="pin"/><text x="376" y="172" class="t-pin">VP</text>
+  <circle cx="364" cy="192" r="5" class="pin"/><text x="376" y="196" class="t-pin">VN</text>
+  <circle cx="364" cy="216" r="5" class="pin"/><text x="376" y="220" class="t-pin">IO34</text>
+  <circle cx="364" cy="240" r="5" class="pin"/><text x="376" y="244" class="t-pin">IO35</text>
+  <circle cx="364" cy="264" r="5" class="pin"/><text x="376" y="268" class="t-pin">IO32</text>
+  <circle cx="364" cy="288" r="5" class="pin"/><text x="376" y="292" class="t-pin">IO33</text>
+  <circle cx="364" cy="312" r="5" class="pin"/><text x="376" y="316" class="t-pin">IO25</text>
+  <circle cx="364" cy="336" r="5" class="pin-on"/><text x="376" y="340" class="t-pin-on">IO26</text>
+  <circle cx="364" cy="360" r="5" class="pin"/><text x="376" y="364" class="t-pin">IO27</text>
+  <circle cx="364" cy="384" r="5" class="pin"/><text x="376" y="388" class="t-pin">IO14</text>
+  <circle cx="364" cy="408" r="5" class="pin"/><text x="376" y="412" class="t-pin">IO12</text>
+  <circle cx="364" cy="432" r="5" class="pin"/><text x="376" y="436" class="t-pin">GND</text>
+  <circle cx="364" cy="456" r="5" class="pin"/><text x="376" y="460" class="t-pin">IO13</text>
+  <circle cx="364" cy="480" r="5" class="pin"/><text x="376" y="484" class="t-pin">SD2</text>
+  <circle cx="364" cy="504" r="5" class="pin"/><text x="376" y="508" class="t-pin">SD3</text>
+  <circle cx="364" cy="528" r="5" class="pin"/><text x="376" y="532" class="t-pin">CMD</text>
+  <circle cx="364" cy="552" r="5" class="pin"/><text x="376" y="556" class="t-pin">5V</text>
+  <circle cx="536" cy="120" r="5" class="pin-on"/><text x="524" y="124" text-anchor="end" class="t-pin-on">GND</text>
+  <circle cx="536" cy="144" r="5" class="pin-on"/><text x="524" y="148" text-anchor="end" class="t-pin-on">IO23</text>
+  <circle cx="536" cy="168" r="5" class="pin"/><text x="524" y="172" text-anchor="end" class="t-pin">IO22</text>
+  <circle cx="536" cy="192" r="5" class="pin"/><text x="524" y="196" text-anchor="end" class="t-pin">TX</text>
+  <circle cx="536" cy="216" r="5" class="pin"/><text x="524" y="220" text-anchor="end" class="t-pin">RX</text>
+  <circle cx="536" cy="240" r="5" class="pin"/><text x="524" y="244" text-anchor="end" class="t-pin">IO21</text>
+  <circle cx="536" cy="264" r="5" class="pin"/><text x="524" y="268" text-anchor="end" class="t-pin">GND</text>
+  <circle cx="536" cy="288" r="5" class="pin-on"/><text x="524" y="292" text-anchor="end" class="t-pin-on">IO19</text>
+  <circle cx="536" cy="312" r="5" class="pin-on"/><text x="524" y="316" text-anchor="end" class="t-pin-on">IO18</text>
+  <circle cx="536" cy="336" r="5" class="pin-on"/><text x="524" y="340" text-anchor="end" class="t-pin-on">IO5</text>
+  <circle cx="536" cy="360" r="5" class="pin-on"/><text x="524" y="364" text-anchor="end" class="t-pin-on">IO17</text>
+  <circle cx="536" cy="384" r="5" class="pin"/><text x="524" y="388" text-anchor="end" class="t-pin">IO16</text>
+  <circle cx="536" cy="408" r="5" class="pin"/><text x="524" y="412" text-anchor="end" class="t-pin">IO4</text>
+  <circle cx="536" cy="432" r="5" class="pin"/><text x="524" y="436" text-anchor="end" class="t-pin">IO0</text>
+  <circle cx="536" cy="456" r="5" class="pin"/><text x="524" y="460" text-anchor="end" class="t-pin">IO2</text>
+  <circle cx="536" cy="480" r="5" class="pin"/><text x="524" y="484" text-anchor="end" class="t-pin">IO15</text>
+  <circle cx="536" cy="504" r="5" class="pin"/><text x="524" y="508" text-anchor="end" class="t-pin">SD1</text>
+  <circle cx="536" cy="528" r="5" class="pin"/><text x="524" y="532" text-anchor="end" class="t-pin">SD0</text>
+  <circle cx="536" cy="552" r="5" class="pin"/><text x="524" y="556" text-anchor="end" class="t-pin">CLK</text>
+  <text x="450.0" y="58" text-anchor="middle" class="t-head">ESP32-DevKit (38 Pins)</text>
+  <rect x="900" y="180" width="160" height="290" rx="10" class="cc"/>
+  <text x="980" y="506" text-anchor="middle" class="t-head">CC1101 · 433 MHz</text>
+  <circle cx="914" cy="220" r="5" class="pin-on"/><text x="928" y="224" class="t-pin-cc">GND</text>
+  <circle cx="914" cy="250" r="5" class="pin-on"/><text x="928" y="254" class="t-pin-cc">VCC</text>
+  <circle cx="914" cy="280" r="5" class="pin-on"/><text x="928" y="284" class="t-pin-cc">GDO0</text>
+  <circle cx="914" cy="310" r="5" class="pin-on"/><text x="928" y="314" class="t-pin-cc">CSN</text>
+  <circle cx="914" cy="340" r="5" class="pin-on"/><text x="928" y="344" class="t-pin-cc">SCK</text>
+  <circle cx="914" cy="370" r="5" class="pin-on"/><text x="928" y="374" class="t-pin-cc">MOSI</text>
+  <circle cx="914" cy="400" r="5" class="pin-on"/><text x="928" y="404" class="t-pin-cc">MISO</text>
+  <circle cx="914" cy="430" r="5" class="pin-on"/><text x="928" y="434" class="t-pin-cc">GDO2</text>
+  <path d="M1030 180 V150 l-8 -4 l16 -6 l-16 -6 l16 -6 l-16 -6 l8 -4 V100" class="ant"/>
+  <path d="M536 120 H760 V220 H914" stroke="var(--gnd)" class="wire"/>
+  <path d="M536 144 H780 V370 H914" stroke="#2563EB" class="wire"/>
+  <path d="M536 288 H800 V400 H914" stroke="#7C3AED" class="wire"/>
+  <path d="M536 312 H820 V340 H914" stroke="#16A34A" class="wire"/>
+  <path d="M536 336 H840 V310 H914" stroke="#EAB308" class="wire"/>
+  <path d="M536 360 H860 V430 H914" stroke="#9CA3AF" class="wire" stroke-dasharray="7 5"/>
+  <path d="M364 120 H310 V36 H720 V250 H914" stroke="#DC2626" class="wire"/>
+  <path d="M364 336 H290 V640 H740 V280 H914" stroke="#EA580C" class="wire"/>
+  <text x="40" y="146" class="t-head">Verbindungen</text>
+  <line x1="40" y1="170" x2="68" y2="170" stroke="#DC2626" class="wire"/><text x="78" y="175" class="t-leg">3V3 → VCC</text>
+  <line x1="40" y1="198" x2="68" y2="198" stroke="var(--gnd)" class="wire"/><text x="78" y="203" class="t-leg">GND → GND</text>
+  <line x1="40" y1="226" x2="68" y2="226" stroke="#EA580C" class="wire"/><text x="78" y="231" class="t-leg">IO26 → GDO0</text>
+  <line x1="40" y1="254" x2="68" y2="254" stroke="#EAB308" class="wire"/><text x="78" y="259" class="t-leg">IO5 → CSN</text>
+  <line x1="40" y1="282" x2="68" y2="282" stroke="#16A34A" class="wire"/><text x="78" y="287" class="t-leg">IO18 → SCK</text>
+  <line x1="40" y1="310" x2="68" y2="310" stroke="#2563EB" class="wire"/><text x="78" y="315" class="t-leg">IO23 → MOSI</text>
+  <line x1="40" y1="338" x2="68" y2="338" stroke="#7C3AED" class="wire"/><text x="78" y="343" class="t-leg">IO19 → MISO</text>
+  <line x1="40" y1="366" x2="68" y2="366" stroke="#9CA3AF" class="wire"/><text x="78" y="371" class="t-leg">IO17 → GDO2 (empfohlen)</text>
+  <text x="40" y="424" class="t-warn">⚠ CC1101 nur an 3,3 V,</text><text x="40" y="444" class="t-warn">niemals an 5 V!</text>
+  <text x="900" y="538" class="t-small">Pinreihenfolge variiert je</text><text x="900" y="556" class="t-small">nach Modul – Aufdruck prüfen.</text>
+</svg>

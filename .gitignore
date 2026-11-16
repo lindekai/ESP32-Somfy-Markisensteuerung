@@ -1,0 +1,7 @@
+.DS_Store
+*.bak
+.pio/
+.vscode/
+node_modules/
+*.3mf.bak
+firmware/backups/

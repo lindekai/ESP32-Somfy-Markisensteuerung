@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="t d">
+  <title id="t">ESP32 Somfy-Markisensteuerung</title>
+  <desc id="d">Stilisierte Markise, ein ESP32 mit CC1101-Funkmodul und Funkwellen.</desc>
+  <defs>
+    <pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#161C25" stroke-width="1"/></pattern>
+    <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#0D1117" stop-opacity="1"/><stop offset="0.55" stop-color="#0D1117" stop-opacity="0.2"/><stop offset="1" stop-color="#0D1117" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1280" height="420" rx="24" fill="#0D1117"/>
+  <rect width="1280" height="420" rx="24" fill="url(#g)"/>
+  <rect width="1280" height="420" rx="24" fill="url(#fade)"/>
+  <g font-family="ui-sans-serif, -apple-system, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="72" y="128" font-size="15" font-weight="700" letter-spacing="2.4" fill="#F2A541">ESP32 · CC1101 · SOMFY RTS 433,42 MHZ</text>
+    <text x="72" y="196" font-size="52" font-weight="800" letter-spacing="-1.2" fill="#E9ECF0">Somfy-Markisensteuerung</text>
+    <text x="72" y="244" font-size="22" fill="#9AA4B2">Die Funk-Markise in Apple Home – lokal, ohne Cloud.</text>
+    <rect x="72" y="296" width="85" height="38" rx="19" fill="#161B22" stroke="#2B3340"/><text x="114" y="321" text-anchor="middle" font-size="16" font-weight="600" fill="#E9ECF0">▲  Auf</text><rect x="169.0" y="296" width="106" height="38" rx="19" fill="#161B22" stroke="#2B3340"/><text x="222" y="321" text-anchor="middle" font-size="16" font-weight="600" fill="#E9ECF0">■  Stopp</text><rect x="287.0" y="296" width="74" height="38" rx="19" fill="#161B22" stroke="#2B3340"/><text x="324" y="321" text-anchor="middle" font-size="16" font-weight="600" fill="#E9ECF0">▼  Ab</text><rect x="373.5" y="296" width="74" height="38" rx="19" fill="#161B22" stroke="#2B3340"/><text x="411" y="321" text-anchor="middle" font-size="16" font-weight="600" fill="#E9ECF0">★  My</text>
+  </g>
+  <!-- Sonne -->
+  <circle cx="790" cy="96" r="24" fill="#F2A541" opacity="0.9"/>
+  <g stroke="#F2A541" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <path d="M790 54v-10M790 148v-10M748 96h-10M842 96h-10M760 66l-7-7M827 133l-7-7M760 126l-7 7M827 59l-7 7"/>
+  </g>
+  <!-- Markise -->
+  <g>
+    <rect x="876" y="78" width="348" height="24" rx="8" fill="#C9CED6"/>
+    <polygon points="890,100 1210,100 1240,200 860,200" fill="#2A303A"/>
+    <polygon points="890,100 930,100 907.5,200 860,200" fill="#F2A541"/>
+    <polygon points="970,100 1010,100 1002.5,200 955,200" fill="#F2A541"/>
+    <polygon points="1050,100 1090,100 1097.5,200 1050,200" fill="#F2A541"/>
+    <polygon points="1130,100 1170,100 1192.5,200 1145,200" fill="#F2A541"/>
+    <path d="M860.0,200 H907.5 V222 A23.75,23.75 0 0 1 860.0,222 Z" fill="#F2A541"/>
+    <path d="M907.5,200 H955.0 V222 A23.75,23.75 0 0 1 907.5,222 Z" fill="#2A303A"/>
+    <path d="M955.0,200 H1002.5 V222 A23.75,23.75 0 0 1 955.0,222 Z" fill="#F2A541"/>
+    <path d="M1002.5,200 H1050.0 V222 A23.75,23.75 0 0 1 1002.5,222 Z" fill="#2A303A"/>
+    <path d="M1050.0,200 H1097.5 V222 A23.75,23.75 0 0 1 1050.0,222 Z" fill="#F2A541"/>
+    <path d="M1097.5,200 H1145.0 V222 A23.75,23.75 0 0 1 1097.5,222 Z" fill="#2A303A"/>
+    <path d="M1145.0,200 H1192.5 V222 A23.75,23.75 0 0 1 1145.0,222 Z" fill="#F2A541"/>
+    <path d="M1192.5,200 H1240.0 V222 A23.75,23.75 0 0 1 1192.5,222 Z" fill="#2A303A"/>
+  </g>
+  <!-- ESP32 + CC1101 -->
+  <g>
+    <rect x="780" y="318" width="146" height="64" rx="7" fill="#243140"/>
+    <rect x="792" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="803" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="814" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="825" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="836" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="847" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="858" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="869" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="880" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="891" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="902" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="913" y="314" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="792" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="803" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="814" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="825" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="836" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="847" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="858" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="869" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="880" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="891" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="902" y="379" width="5" height="7" rx="1" fill="#C9A94B"/><rect x="913" y="379" width="5" height="7" rx="1" fill="#C9A94B"/>
+    <rect x="768" y="338" width="16" height="24" rx="3" fill="#34465A"/>
+    <rect x="830" y="328" width="62" height="44" rx="4" fill="#4A5D73"/>
+    <rect x="840" y="338" width="42" height="24" rx="2" fill="none" stroke="#34465A" stroke-width="2"/>
+    <circle cx="806" cy="350" r="3" fill="#62AEFF"/>
+    <rect x="944" y="326" width="74" height="48" rx="5" fill="#2E8B57"/>
+    <rect x="956" y="338" width="26" height="24" rx="2" fill="#1E2A22" opacity="0.6"/>
+    <path d="M934 340h10M934 350h10M934 360h10M926 340h8M926 360h8" stroke="#34465A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1000 326 V312 l-6 -3 l12 -4 l-12 -4 l12 -4 l-12 -4 l6 -3 V286" fill="none" stroke="#C9CED6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="1000" cy="286" r="4" fill="#C9CED6"/>
+  </g>
+  <!-- Funkwellen -->
+  <g fill="none" stroke="#62AEFF" stroke-width="4" stroke-linecap="round">
+    <path d="M1009,270.4 A18,18 0 0 1 1018,286"/>
+    <path d="M1016,258.3 A32,32 0 0 1 1032,286" opacity="0.75"/>
+    <path d="M1023,246.2 A46,46 0 0 1 1046,286" opacity="0.5"/>
+  </g>
+</svg>

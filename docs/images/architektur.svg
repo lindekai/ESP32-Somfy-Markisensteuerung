@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="t">
+  <title id="t">Architektur: von der Home-App bis zur Markise</title>
+  <style>
+    svg { --bg:#FFFFFF; --paper:#FBFAF7; --grid:#EEF0F3; --fg:#1B1F24; --muted:#6B7280; --line:#1B1F24; --box:#FFFFFF;
+          --boxstroke:#C9CED6; --accent:#E38B2C; --blue:#2F7FD8; --gnd:#111827; --warn:#B91C1C; --card:#F5F2EC; }
+    @media (prefers-color-scheme: dark) { svg { --bg:#0D1117; --paper:#0F141B; --grid:#18202A; --fg:#E9ECF0; --muted:#9AA4B2;
+          --line:#D5DAE1; --box:#161B22; --boxstroke:#2E3846; --accent:#F2A541; --blue:#62AEFF; --gnd:#E5E7EB; --warn:#F87171; --card:#161B22; } }
+    text { font-family: ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; fill: var(--fg); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .muted { fill: var(--muted); }
+  </style>
+  <rect width="1200" height="330" rx="16" style="fill:var(--bg)"/>
+  <rect x="30" y="60" width="180" height="112" rx="14" style="fill:var(--card);stroke:var(--boxstroke)" stroke-width="1.5"/><circle cx="56" cy="88" r="13" style="fill:var(--fg)"/><text x="56" y="93" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--bg)">1</text><text x="78" y="93" font-size="11" font-weight="700" letter-spacing="1.2" class="muted">STEUERUNG</text><text x="48" y="128" font-size="19" font-weight="800">Home-App</text><text x="48" y="152" font-size="13" class="muted">iPhone, iPad, Siri</text>
+  <rect x="270" y="60" width="180" height="112" rx="14" style="fill:var(--card);stroke:var(--boxstroke)" stroke-width="1.5"/><circle cx="296" cy="88" r="13" style="fill:var(--fg)"/><text x="296" y="93" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--bg)">2</text><text x="318" y="93" font-size="11" font-weight="700" letter-spacing="1.2" class="muted">HOME-ZENTRALE</text><text x="288" y="128" font-size="19" font-weight="800">Apple TV</text><text x="288" y="152" font-size="13" class="muted">Fernzugriff, Automation</text>
+  <rect x="510" y="60" width="180" height="112" rx="14" style="fill:var(--card);stroke:var(--boxstroke)" stroke-width="1.5"/><circle cx="536" cy="88" r="13" style="fill:var(--fg)"/><text x="536" y="93" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--bg)">3</text><text x="558" y="93" font-size="11" font-weight="700" letter-spacing="1.2" class="muted">BRIDGE</text><text x="528" y="128" font-size="19" font-weight="800">Homebridge</text><text x="528" y="152" font-size="13" class="muted">Raspberry Pi</text>
+  <rect x="750" y="60" width="180" height="112" rx="14" style="fill:var(--card);stroke:var(--accent)" stroke-width="2.5"/><circle cx="776" cy="88" r="13" style="fill:var(--accent)"/><text x="776" y="93" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--bg)">4</text><text x="798" y="93" font-size="11" font-weight="700" letter-spacing="1.2" class="muted">FUNK-GATEWAY</text><text x="768" y="128" font-size="19" font-weight="800">ESP32 + CC1101</text><text x="768" y="152" font-size="13" class="muted">ESPSomfy-RTS</text>
+  <rect x="990" y="60" width="180" height="112" rx="14" style="fill:var(--card);stroke:var(--boxstroke)" stroke-width="1.5"/><circle cx="1016" cy="88" r="13" style="fill:var(--fg)"/><text x="1016" y="93" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--bg)">5</text><text x="1038" y="93" font-size="11" font-weight="700" letter-spacing="1.2" class="muted">AKTOR</text><text x="1008" y="128" font-size="19" font-weight="800">Somfy-Motor</text><text x="1008" y="152" font-size="13" class="muted">Markise</text>
+  <path d="M214 116.0 H256" style="stroke:var(--muted)" stroke-width="2.5"/>
+  <path d="M254 110.0 L266 116.0 L254 122.0 Z" style="fill:var(--muted)"/>
+  <path d="M454 116.0 H496" style="stroke:var(--muted)" stroke-width="2.5"/>
+  <path d="M494 110.0 L506 116.0 L494 122.0 Z" style="fill:var(--muted)"/>
+  <path d="M694 116.0 H736" style="stroke:var(--muted)" stroke-width="2.5"/>
+  <path d="M734 110.0 L746 116.0 L734 122.0 Z" style="fill:var(--muted)"/>
+  <path d="M934 116.0 H976" style="stroke:var(--blue)" stroke-width="2.5" stroke-dasharray="3 5" stroke-linecap="round"/><g fill="none" style="stroke:var(--blue)" stroke-width="2.5" stroke-linecap="round"><path d="M956.0 107.0 a12 12 0 0 1 0 18"/><path d="M962.0 101.0 a20 20 0 0 1 0 30" opacity="0.6"/></g>
+  <path d="M974 110.0 L986 116.0 L974 122.0 Z" style="fill:var(--blue)"/>
+  <rect x="990" y="230" width="180" height="70" rx="14" style="fill:var(--card);stroke:var(--boxstroke)" stroke-width="1.5" stroke-dasharray="6 5"/><text x="1008" y="260" font-size="16" font-weight="800">Telis 1 RTS Pure</text><text x="1008" y="282" font-size="13" class="muted">Original, bleibt nutzbar</text>
+  <path d="M1080.0 230 V184" style="stroke:var(--blue)" stroke-width="2.5" stroke-dasharray="3 5" stroke-linecap="round"/><path d="M1074.0 186 L1080.0 174 L1086.0 186 Z" style="fill:var(--blue)"/>
+  <path d="M990 265 H840.0 V184" fill="none" style="stroke:var(--accent)" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"/><path d="M834.0 186 L840.0 174 L846.0 186 Z" style="fill:var(--accent)"/><text x="828.0" y="252" text-anchor="end" font-size="12" style="fill:var(--accent)" font-weight="700">ESPSomfy-RTS hört mit,</text><text x="828.0" y="270" text-anchor="end" font-size="12" style="fill:var(--accent)" font-weight="700">Position bleibt aktuell</text>
+  <text x="240.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--fg)">HomeKit</text><text x="240.0" y="192" text-anchor="middle" font-size="10" class="muted">WLAN</text>
+  <text x="480.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--fg)">HomeKit (HAP)</text><text x="480.0" y="192" text-anchor="middle" font-size="10" class="muted">WLAN</text>
+  <text x="720.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--fg)">HTTP + WebSocket</text><text x="720.0" y="192" text-anchor="middle" font-size="10" class="muted">WLAN · Port 80</text>
+  <text x="960.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--blue)">Somfy RTS</text><text x="960.0" y="192" text-anchor="middle" font-size="10" class="muted">433,42 MHz</text>
+</svg>
