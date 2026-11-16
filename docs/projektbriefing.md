@@ -22,6 +22,9 @@ Die funkgesteuerte Somfy-Markise per ESP32 smart machen und in Apple Home steuer
 
 ## Verdrahtung (ESP32-DevKit)
 
+> [!NOTE]
+> **Aktualisiert:** Für den Aufbau auf **einem** Breadboard wurde die Pinbelegung geändert, alle Leitungen liegen jetzt an der linken Pinreihe. Die Firmware wird mit der **Arduino IDE** gebaut. Maßgeblich sind [aufbau.md](aufbau.md) und [firmware/README.md](../firmware/README.md). Die Tabelle unten zeigt den ursprünglichen Plan.
+
 | Funktion | ESP32-Pin |
 | --- | --- |
 | CC1101 SCK | IO18 |

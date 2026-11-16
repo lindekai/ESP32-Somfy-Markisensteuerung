@@ -12,60 +12,60 @@
   <rect width="1200" height="780" rx="16" style="fill:var(--paper)"/>
   <defs><pattern id="sg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" style="stroke:var(--grid)" stroke-width="1"/></pattern></defs>
   <rect x="16" y="16" width="1168" height="748" rx="10" fill="url(#sg)" style="stroke:var(--boxstroke)" stroke-width="1.5"/>
-  <rect x="280" y="150" width="220" height="460" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="2.2"/><text x="280" y="138" font-size="14" font-weight="800" style="fill:var(--accent)">U1</text><text x="314" y="138" font-size="14" font-weight="700">ESP32-DevKit (WROOM-32)</text>
-  <text x="390" y="390" text-anchor="middle" font-size="22" font-weight="800" class="muted" opacity="0.35">ESP32</text>
-  <path d="M390 150 V110" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M390 110 V84 M374 84 H406" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="390" y="74" text-anchor="middle" font-size="14" font-weight="700" style="fill:#DC2626">+3V3</text>
-  <text x="398" y="172" font-size="12" class="mono">3V3</text>
-  <path d="M390 610 V640" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M390 640 V660 M374 660 H406 M380 667 H400 M386 674 H394" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <text x="398" y="600" font-size="12" class="mono">GND</text>
-  <path d="M280 560 H220" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="290" y="564" font-size="12" class="mono">5V</text>
-  <rect x="150" y="544" width="70" height="32" rx="5" style="fill:var(--card);stroke:var(--line)" stroke-width="2"/><text x="185" y="565" text-anchor="middle" font-size="12" font-weight="700">USB</text><text x="185" y="598" text-anchor="middle" font-size="11" class="muted">5-V-Netzteil</text>
-  <rect x="760" y="190" width="180" height="280" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="2.2"/><text x="760" y="178" font-size="14" font-weight="800" style="fill:var(--accent)">U2</text><text x="794" y="178" font-size="14" font-weight="700">CC1101 433 MHz</text>
-  <text x="850" y="345" text-anchor="middle" font-size="22" font-weight="800" class="muted" opacity="0.35">CC1101</text>
-  <path d="M905 190 V150" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M905 150 V124 M889 124 H921" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="905" y="114" text-anchor="middle" font-size="14" font-weight="700" style="fill:#DC2626">+3V3</text>
-  <text x="897" y="212" text-anchor="end" font-size="12" class="mono">VCC</text>
-  <path d="M905 470 V500" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M905 500 V520 M889 520 H921 M895 527 H915 M901 534 H909" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <text x="897" y="460" text-anchor="end" font-size="12" class="mono">GND</text>
-  <path d="M940 250 H1000 V200 M984 172 L1000 200 L1016 172 Z" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="932" y="254" text-anchor="end" font-size="12" class="mono">ANT</text><text x="1026" y="190" font-size="12" class="muted">433,42 MHz</text>
-  <text x="490" y="234" text-anchor="end" font-size="12" class="mono">IO18</text>
-  <text x="770" y="234" font-size="12" class="mono">SCK</text>
-  <path d="M500 230 H760" style="stroke:#16A34A" stroke-width="2.6" fill="none"/>
-  <circle cx="500" cy="230" r="3.5" style="fill:#16A34A"/><circle cx="760" cy="230" r="3.5" style="fill:#16A34A"/>
-  <rect x="604" y="213" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="630" y="225" text-anchor="middle" font-size="11" font-weight="700" style="fill:#16A34A">SCK</text>
-  <text x="490" y="274" text-anchor="end" font-size="12" class="mono">IO19</text>
-  <text x="770" y="274" font-size="12" class="mono">MISO</text>
-  <path d="M500 270 H760" style="stroke:#7C3AED" stroke-width="2.6" fill="none"/>
-  <circle cx="500" cy="270" r="3.5" style="fill:#7C3AED"/><circle cx="760" cy="270" r="3.5" style="fill:#7C3AED"/>
-  <rect x="604" y="253" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="630" y="265" text-anchor="middle" font-size="11" font-weight="700" style="fill:#7C3AED">MISO</text>
-  <text x="490" y="314" text-anchor="end" font-size="12" class="mono">IO23</text>
-  <text x="770" y="314" font-size="12" class="mono">MOSI</text>
-  <path d="M500 310 H760" style="stroke:#2563EB" stroke-width="2.6" fill="none"/>
-  <circle cx="500" cy="310" r="3.5" style="fill:#2563EB"/><circle cx="760" cy="310" r="3.5" style="fill:#2563EB"/>
-  <rect x="604" y="293" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="630" y="305" text-anchor="middle" font-size="11" font-weight="700" style="fill:#2563EB">MOSI</text>
-  <text x="490" y="354" text-anchor="end" font-size="12" class="mono">IO5</text>
-  <text x="770" y="354" font-size="12" class="mono">CSN</text>
-  <path d="M500 350 H760" style="stroke:#CA8A04" stroke-width="2.6" fill="none"/>
-  <circle cx="500" cy="350" r="3.5" style="fill:#CA8A04"/><circle cx="760" cy="350" r="3.5" style="fill:#CA8A04"/>
-  <rect x="604" y="333" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="630" y="345" text-anchor="middle" font-size="11" font-weight="700" style="fill:#CA8A04">CSN</text>
-  <text x="490" y="394" text-anchor="end" font-size="12" class="mono">IO26</text>
-  <text x="770" y="394" font-size="12" class="mono">GDO0</text>
-  <path d="M500 390 H760" style="stroke:#EA580C" stroke-width="2.6" fill="none"/>
-  <circle cx="500" cy="390" r="3.5" style="fill:#EA580C"/><circle cx="760" cy="390" r="3.5" style="fill:#EA580C"/>
-  <rect x="604" y="373" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="630" y="385" text-anchor="middle" font-size="11" font-weight="700" style="fill:#EA580C">TX</text>
-  <text x="490" y="434" text-anchor="end" font-size="12" class="mono">IO17</text>
-  <text x="770" y="434" font-size="12" class="mono">GDO2</text>
-  <path d="M500 430 H760" style="stroke:#64748B" stroke-width="2.6" fill="none"/>
-  <circle cx="500" cy="430" r="3.5" style="fill:#64748B"/><circle cx="760" cy="430" r="3.5" style="fill:#64748B"/>
-  <rect x="604" y="413" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="630" y="425" text-anchor="middle" font-size="11" font-weight="700" style="fill:#64748B">RX</text>
-  <rect x="760" y="570" width="180" height="120" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="2.2" stroke-dasharray="8 6"/><text x="760" y="558" font-size="14" font-weight="800" style="fill:var(--accent)">U3</text><text x="794" y="558" font-size="14" font-weight="700">OLED 0,96″ (optional)</text>
-  <text x="850" y="650" text-anchor="middle" font-size="12" class="muted">SSD1306 · I²C · 3V3/GND</text>
-  <text x="490" y="494" text-anchor="end" font-size="12" class="mono">IO21</text>
-  <path d="M500 490 H660 V600 H760" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-dasharray="7 5" opacity="0.7"/>
-  <text x="770" y="604" font-size="12" class="mono">SDA</text>
-  <text x="490" y="534" text-anchor="end" font-size="12" class="mono">IO22</text>
-  <path d="M500 530 H640 V630 H760" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-dasharray="7 5" opacity="0.7"/>
-  <text x="770" y="634" font-size="12" class="mono">SCL</text>
-  <g transform="translate(980,300)"><rect width="190" height="170" rx="8" style="fill:var(--card);stroke:var(--boxstroke)"/><text x="14" y="26" font-size="13" font-weight="800">Hinweise</text><text x="14" y="52" font-size="12" font-weight="700" style="fill:var(--warn)">CC1101 nur an 3,3 V</text><text x="14" y="76" font-size="12" class="muted">TX = GDO0 sendet</text><text x="14" y="96" font-size="12" class="muted">RX = GDO2 empfängt,</text><text x="14" y="114" font-size="12" class="muted">nötig zum Mithören</text><text x="14" y="132" font-size="12" class="muted">der Telis</text><text x="14" y="156" font-size="12" class="muted">SPI: VSPI-Standardpins</text></g>
-  <g transform="translate(980,600)"><rect width="190" height="140" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="1.5"/><path d="M0 46 H190 M0 78 H190 M0 110 H190 M95 78 V140" style="stroke:var(--boxstroke)"/><text x="12" y="20" font-size="10" class="muted">TITEL</text><text x="12" y="38" font-size="12.5" font-weight="800">Somfy-Markisensteuerung</text><text x="12" y="66" font-size="12">ESP32 + CC1101 (RTS)</text><text x="12" y="92" font-size="9" class="muted">BLATT</text><text x="12" y="124" font-size="9" class="muted">REV</text><text x="12" y="106" font-size="11" font-weight="700">1 / 1</text><text x="12" y="136" font-size="11" font-weight="700">A</text><text x="107" y="92" font-size="9" class="muted">DATUM</text><text x="107" y="124" font-size="9" class="muted">LIZENZ</text><text x="107" y="106" font-size="11" font-weight="700">11/2026</text><text x="107" y="136" font-size="11" font-weight="700">MIT</text></g>
+  <rect x="700" y="150" width="220" height="460" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="2.2"/><text x="700" y="138" font-size="14" font-weight="800" style="fill:var(--accent)">U1</text><text x="734" y="138" font-size="14" font-weight="700">ESP32-DevKit (WROOM-32)</text>
+  <text x="830.0" y="390" text-anchor="middle" font-size="22" font-weight="800" class="muted" opacity="0.35">ESP32</text>
+  <path d="M760 150 V110" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M760 110 V84 M744 84 H776" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="760" y="74" text-anchor="middle" font-size="14" font-weight="700" style="fill:#DC2626">+3V3</text>
+  <text x="768" y="172" font-size="12" class="mono">3V3</text>
+  <path d="M760 610 V640" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M760 640 V660 M744 660 H776 M750 667 H770 M756 674 H764" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <text x="768" y="600" font-size="12" class="mono">GND</text>
+  <path d="M920 560 H970" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="910" y="564" text-anchor="end" font-size="12" class="mono">5V</text>
+  <rect x="970" y="544" width="70" height="32" rx="5" style="fill:var(--card);stroke:var(--line)" stroke-width="2"/><text x="1005" y="565" text-anchor="middle" font-size="12" font-weight="700">USB</text><text x="1005" y="598" text-anchor="middle" font-size="11" class="muted">5-V-Netzteil</text>
+  <rect x="260" y="190" width="180" height="280" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="2.2"/><text x="260" y="178" font-size="14" font-weight="800" style="fill:var(--accent)">U2</text><text x="294" y="178" font-size="14" font-weight="700">CC1101 433 MHz</text>
+  <text x="340.0" y="345" text-anchor="middle" font-size="22" font-weight="800" class="muted" opacity="0.35">CC1101</text>
+  <path d="M300 190 V150" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M300 150 V124 M284 124 H316" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="300" y="114" text-anchor="middle" font-size="14" font-weight="700" style="fill:#DC2626">+3V3</text>
+  <text x="308" y="212" font-size="12" class="mono">VCC</text>
+  <path d="M300 470 V500" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M300 500 V520 M284 520 H316 M290 527 H310 M296 534 H304" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <text x="308" y="460" font-size="12" class="mono">GND</text>
+  <path d="M260 250 H200 V200 M184 172 L200 200 L216 172 Z" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round"/><text x="268" y="254" font-size="12" class="mono">ANT</text><text x="120" y="160" font-size="12" class="muted">433,42 MHz</text>
+  <text x="430" y="234" text-anchor="end" font-size="12" class="mono">GDO2</text>
+  <text x="710" y="234" font-size="12" class="mono">IO34</text>
+  <path d="M440 230 H700" style="stroke:#94A3B8" stroke-width="2.6" fill="none"/>
+  <circle cx="440" cy="230" r="3.5" style="fill:#94A3B8"/><circle cx="700" cy="230" r="3.5" style="fill:#94A3B8"/>
+  <rect x="544.0" y="213" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="570.0" y="225" text-anchor="middle" font-size="11" font-weight="700" style="fill:#94A3B8">RX</text>
+  <text x="430" y="274" text-anchor="end" font-size="12" class="mono">MISO</text>
+  <text x="710" y="274" font-size="12" class="mono">IO35</text>
+  <path d="M440 270 H700" style="stroke:#7C3AED" stroke-width="2.6" fill="none"/>
+  <circle cx="440" cy="270" r="3.5" style="fill:#7C3AED"/><circle cx="700" cy="270" r="3.5" style="fill:#7C3AED"/>
+  <rect x="544.0" y="253" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="570.0" y="265" text-anchor="middle" font-size="11" font-weight="700" style="fill:#7C3AED">MISO</text>
+  <text x="430" y="314" text-anchor="end" font-size="12" class="mono">MOSI</text>
+  <text x="710" y="314" font-size="12" class="mono">IO32</text>
+  <path d="M440 310 H700" style="stroke:#2563EB" stroke-width="2.6" fill="none"/>
+  <circle cx="440" cy="310" r="3.5" style="fill:#2563EB"/><circle cx="700" cy="310" r="3.5" style="fill:#2563EB"/>
+  <rect x="544.0" y="293" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="570.0" y="305" text-anchor="middle" font-size="11" font-weight="700" style="fill:#2563EB">MOSI</text>
+  <text x="430" y="354" text-anchor="end" font-size="12" class="mono">SCK</text>
+  <text x="710" y="354" font-size="12" class="mono">IO33</text>
+  <path d="M440 350 H700" style="stroke:#16A34A" stroke-width="2.6" fill="none"/>
+  <circle cx="440" cy="350" r="3.5" style="fill:#16A34A"/><circle cx="700" cy="350" r="3.5" style="fill:#16A34A"/>
+  <rect x="544.0" y="333" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="570.0" y="345" text-anchor="middle" font-size="11" font-weight="700" style="fill:#16A34A">SCK</text>
+  <text x="430" y="394" text-anchor="end" font-size="12" class="mono">CSN</text>
+  <text x="710" y="394" font-size="12" class="mono">IO25</text>
+  <path d="M440 390 H700" style="stroke:#EAB308" stroke-width="2.6" fill="none"/>
+  <circle cx="440" cy="390" r="3.5" style="fill:#EAB308"/><circle cx="700" cy="390" r="3.5" style="fill:#EAB308"/>
+  <rect x="544.0" y="373" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="570.0" y="385" text-anchor="middle" font-size="11" font-weight="700" style="fill:#EAB308">CSN</text>
+  <text x="430" y="434" text-anchor="end" font-size="12" class="mono">GDO0</text>
+  <text x="710" y="434" font-size="12" class="mono">IO26</text>
+  <path d="M440 430 H700" style="stroke:#EA580C" stroke-width="2.6" fill="none"/>
+  <circle cx="440" cy="430" r="3.5" style="fill:#EA580C"/><circle cx="700" cy="430" r="3.5" style="fill:#EA580C"/>
+  <rect x="544.0" y="413" width="52" height="16" rx="3" style="fill:var(--box)"/><text x="570.0" y="425" text-anchor="middle" font-size="11" font-weight="700" style="fill:#EA580C">TX</text>
+  <rect x="260" y="570" width="180" height="120" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="2.2" stroke-dasharray="8 6"/><text x="260" y="558" font-size="14" font-weight="800" style="fill:var(--accent)">U3</text><text x="294" y="558" font-size="14" font-weight="700">OLED 0,96″ (optional)</text>
+  <text x="350" y="672" text-anchor="middle" font-size="12" class="muted">SSD1306 · I²C · 3V3/GND</text>
+  <text x="710" y="494" font-size="12" class="mono">IO27</text>
+  <path d="M700 490 H540 V600 H440" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-dasharray="7 5" opacity="0.7"/>
+  <text x="430" y="604" text-anchor="end" font-size="12" class="mono">SDA</text>
+  <text x="710" y="534" font-size="12" class="mono">IO14</text>
+  <path d="M700 530 H560 V630 H440" style="stroke:var(--line)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-dasharray="7 5" opacity="0.7"/>
+  <text x="430" y="634" text-anchor="end" font-size="12" class="mono">SCL</text>
+  <g transform="translate(980,250)"><rect width="190" height="230" rx="8" style="fill:var(--card);stroke:var(--boxstroke)"/><text x="14" y="26" font-size="13" font-weight="800">Hinweise</text><text x="14" y="52" font-size="12" font-weight="700" style="fill:var(--warn)">CC1101 nur an 3,3 V</text><text x="14" y="76" font-size="12" class="muted">Alle Leitungen an der</text><text x="14" y="94" font-size="12" class="muted">linken Pinreihe – passt</text><text x="14" y="112" font-size="12" class="muted">auf ein Breadboard</text><text x="14" y="138" font-size="12" class="muted">SPI frei zugeordnet</text><text x="14" y="156" font-size="12" class="muted">(GPIO-Matrix)</text><text x="14" y="182" font-size="12" class="muted">IO34/35 nur Eingang:</text><text x="14" y="200" font-size="12" class="muted">passt für MISO und RX</text></g>
+  <g transform="translate(980,600)"><rect width="190" height="140" rx="6" style="fill:var(--box);stroke:var(--line)" stroke-width="1.5"/><path d="M0 46 H190 M0 78 H190 M0 110 H190 M95 78 V140" style="stroke:var(--boxstroke)"/><text x="12" y="20" font-size="10" class="muted">TITEL</text><text x="12" y="38" font-size="12.5" font-weight="800">Somfy-Markisensteuerung</text><text x="12" y="66" font-size="12">ESP32 + CC1101 (RTS)</text><text x="12" y="92" font-size="9" class="muted">BLATT</text><text x="12" y="124" font-size="9" class="muted">REV</text><text x="12" y="106" font-size="11" font-weight="700">1 / 1</text><text x="12" y="136" font-size="11" font-weight="700">B</text><text x="107" y="92" font-size="9" class="muted">DATUM</text><text x="107" y="124" font-size="9" class="muted">LIZENZ</text><text x="107" y="106" font-size="11" font-weight="700">11/2026</text><text x="107" y="136" font-size="11" font-weight="700">MIT</text></g>
   <text x="40" y="58" font-size="20" font-weight="800">Schaltplan</text><text x="40" y="80" font-size="13" class="muted">ESP32-DevKit · CC1101 · optionales OLED</text>
 </svg>

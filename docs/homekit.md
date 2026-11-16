@@ -6,10 +6,11 @@ Vorhandenes Setup: Homebridge auf einem Raspberry Pi, Apple TV als Steuerzentral
 
 - ESPSomfy-RTS bringt **kein** eigenes HomeKit mit. Offizielle Integrationen gibt es für Home Assistant und MQTT.
 - Auf npm gibt es **kein** Homebridge-Plugin speziell für ESPSomfy-RTS.
-- ESPSomfy-RTS 4.x stellt eine lokale API auf Port 80 bereit:
-  - **Befehle:** `POST /shadeCommand` mit JSON `{"shadeId": 1, "command": "Up"}` (auch `Down`, `My`, `Stop`) oder `{"shadeId": 1, "target": 50}` für eine Position in Prozent. Alternativ als Query-Parameter per GET.
-  - **Zustand:** WebSocket `ws://<gerät>/ws` mit Events wie `shadeState` (Position, Ziel, Richtung). Protokoll: [PROTOCOL.md](https://github.com/cjkas/ESPSomfy-RTS/blob/main/docs/PROTOCOL.md).
-  - Ist im Web-UI ein PIN/Passwort gesetzt, braucht jede Anfrage einen Token (`/login` → Header `apikey`).
+- ESPSomfy-RTS v2.4.6 (Arduino-Version) stellt eine lokale API bereit:
+  - **Befehle:** `http://<gerät>:8081/shadeCommand?shadeId=1&command=up` (auch `down`, `my`, `stop`) oder `…&target=50` für eine Position in Prozent. Alternativ als JSON per POST.
+  - **Zustand:** WebSocket `ws://<gerät>:8080`, sendet bei jeder Bewegung ein Event mit Position, Ziel und Richtung.
+  - Ist im Web-UI ein PIN oder Passwort gesetzt, braucht jede Anfrage einen API-Schlüssel.
+- Beim Wechsel auf den Fork cjkas v4.x laufen API und Events auf Port 80 (`/shadeCommand`, `ws://<gerät>/ws`), siehe [PROTOCOL.md](https://github.com/cjkas/ESPSomfy-RTS/blob/main/docs/PROTOCOL.md). Ein Plugin sollte beide Varianten unterstützen.
 
 ## Optionen
 
@@ -21,11 +22,11 @@ Vorhandenes Setup: Homebridge auf einem Raspberry Pi, Apple TV als Steuerzentral
 
 **Empfehlung: Option A.** Ein schlankes Plugin (`homebridge-espsomfy-rts`) bildet die Markise als HomeKit-`WindowCovering` ab:
 
-- `TargetPosition` → `POST /shadeCommand` mit `target`
-- `CurrentPosition` / `PositionState` ← WebSocket-Event `shadeState`
-- optional ein zusätzlicher Schalter „My-Position“ → `command: "My"`
+- `TargetPosition` → `/shadeCommand` mit `target`
+- `CurrentPosition` / `PositionState` ← WebSocket-Events des Geräts
+- optional ein zusätzlicher Schalter „My-Position“ → `command=my`
 
-Hinweis zur Richtung: ESPSomfy-RTS kehrt bei Shades vom Typ *Awning* die Positionsrichtung um (bei der Home-Assistant-Anbindung über `shadeType == awning` bzw. `flipPosition`, siehe `src/MqttDisco.cpp`). Das Plugin muss dieselbe Umrechnung machen, damit „öffnen“ in der Home-App das Ausfahren der Markise bedeutet. Am echten Gerät prüfen.
+Hinweis zur Richtung: ESPSomfy-RTS kehrt bei Shades vom Typ *Awning* die Positionsrichtung um (im Fork cjkas sichtbar in `src/MqttDisco.cpp`: `shadeType == awning` bzw. `flipPosition`). Das Plugin muss dieselbe Umrechnung machen, damit „öffnen“ in der Home-App das Ausfahren der Markise bedeutet. Am echten Gerät prüfen.
 
 ## Nächste Schritte
 

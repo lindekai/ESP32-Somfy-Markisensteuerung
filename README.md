@@ -8,7 +8,8 @@
 
 <p align="center">
   <img alt="Plattform ESP32" src="https://img.shields.io/badge/Plattform-ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white">
-  <a href="https://github.com/cjkas/ESPSomfy-RTS"><img alt="Basis ESPSomfy-RTS" src="https://img.shields.io/badge/Basis-ESPSomfy--RTS%204.x-F2A541?style=flat-square"></a>
+  <a href="https://github.com/rstrouse/ESPSomfy-RTS"><img alt="Basis ESPSomfy-RTS" src="https://img.shields.io/badge/Basis-ESPSomfy--RTS%202.4.6-F2A541?style=flat-square"></a>
+  <img alt="Arduino IDE" src="https://img.shields.io/badge/Arduino%20IDE-2.x-00878F?style=flat-square&logo=arduino&logoColor=white">
   <img alt="Funk Somfy RTS 433,42 MHz" src="https://img.shields.io/badge/Funk-RTS%20433%2C42%20MHz-2F7FD8?style=flat-square">
   <img alt="Apple HomeKit" src="https://img.shields.io/badge/Apple-HomeKit-000000?style=flat-square&logo=apple&logoColor=white">
   <a href="LICENSE"><img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-3DA639?style=flat-square"></a>
@@ -44,8 +45,8 @@ Die Home-App spricht über das Apple TV mit Homebridge auf dem Raspberry Pi. Hom
 | Mikrocontroller | ESP32-DevKit, ESP32-WROOM-32, 38 Pins, Micro-USB | vorhanden |
 | Funkmodul | CC1101, 433-MHz-Variante mit Antenne, 2,54-mm-Raster | zu kaufen |
 | Stromversorgung | USB-Netzteil (5 V, ≥ 1 A) und Micro-USB-Kabel | zu kaufen |
-| Aufbau | 2 Breadboards, 10 Dupont-Kabel | vorhanden |
-| Optional | 0,96″-I²C-OLED (SSD1306) an IO21 (SDA) / IO22 (SCL) | offen |
+| Aufbau | 1 Breadboard (830 Kontakte), 10 Dupont-Kabel | vorhanden |
+| Optional | 0,96″-I²C-OLED (SSD1306), reserviert: IO27 (SDA) / IO14 (SCL) | offen |
 | Markise | Somfy RTS, Fernbedienung Telis 1 RTS Pure, 433,42 MHz | vorhanden |
 | **Summe** | ohne vorhandene Teile ca. 10–15 € | |
 
@@ -73,19 +74,21 @@ Die Home-App spricht über das Apple TV mit Homebridge auf dem Raspberry Pi. Hom
 | --- | --- | --- |
 | VCC | 3V3 | Versorgung, **nur 3,3 V** |
 | GND | GND | Masse |
-| SCK | IO18 | SPI-Takt |
-| MISO | IO19 | SPI-Daten zum ESP32 |
-| MOSI | IO23 | SPI-Daten zum CC1101 |
-| CSN | IO5 | SPI-Chip-Select |
-| GDO0 | IO26 | Senden (in ESPSomfy-RTS: *TX Pin*) |
-| GDO2 | IO17 | Empfangen (in ESPSomfy-RTS: *RX Pin*), empfohlen – nötig zum Mithören der Telis |
+| GDO2 | IO34 | Empfangen (*RX Pin*) – nötig zum Mithören der Telis |
+| MISO | IO35 | SPI-Daten zum ESP32 |
+| MOSI | IO32 | SPI-Daten zum CC1101 |
+| SCK | IO33 | SPI-Takt |
+| CSN | IO25 | SPI-Chip-Select |
+| GDO0 | IO26 | Senden (*TX Pin*) |
+
+Alle Leitungen liegen an der **linken Pinreihe** des DevKits. So passt der Aufbau auf **ein** Breadboard: Das 38-Pin-DevKit ist so breit, dass nur auf einer Seite eine Lochreihe frei bleibt. Der ESP32 leitet SPI über seine GPIO-Matrix auf beliebige Pins, ESPSomfy-RTS übernimmt die Pins aus den Einstellungen.
 
 > [!WARNING]
 > Den CC1101 niemals an 5 V anschließen. Die Pinreihenfolge auf der Stiftleiste unterscheidet sich je nach Modul – immer nach dem Aufdruck verdrahten, nicht nach der Position.
 
 ## Schnellstart
 
-1. **Flashen** – `SomfyController.onboard.esp32.bin.zip` aus dem [aktuellen ESPSomfy-RTS-Release](https://github.com/cjkas/ESPSomfy-RTS/releases/latest) per USB aufspielen. → [firmware/](firmware/README.md)
+1. **Kompilieren und flashen mit der Arduino IDE** – ESP32-Core 2.0.17, vier Bibliotheken, Sketch hochladen, Weboberfläche per LittleFS-Upload. → [firmware/](firmware/README.md)
 2. **CC1101 konfigurieren** – Pins wie oben eintragen, Frequenz **433,42 MHz**, Radio aktivieren. → [firmware/](firmware/README.md#cc1101-konfigurieren)
 3. **Als Fernbedienung anlernen** – PROG an der Telis drücken, dann im Web-UI *Pair Shade*. → [docs/anlernen.md](docs/anlernen.md)
 4. **In Apple Home einbinden** – über Homebridge. → [docs/homekit.md](docs/homekit.md)
@@ -95,7 +98,7 @@ Die Home-App spricht über das Apple TV mit Homebridge auf dem Raspberry Pi. Hom
 | | Thema |
 | --- | --- |
 | 🔧 | [Aufbau auf dem Breadboard](docs/aufbau.md) – Stückliste, Schaltplan, Schritte, Fehlersuche |
-| 💾 | [Firmware](firmware/README.md) – Flashen, CC1101 konfigurieren, Backups |
+| 💾 | [Firmware](firmware/README.md) – Arduino IDE, Bibliotheken, Flashen, CC1101 konfigurieren, Backups |
 | 📡 | [Anlernen](docs/anlernen.md) – ESP32 als Fernbedienung anmelden, Testprotokoll, Reichweite |
 | 🏠 | [Apple Home](docs/homekit.md) – Homebridge-Anbindung, API, Optionen |
 | 📦 | [Gehäuse](enclosure/README.md) – Anforderungen an den 3D-Druck |
@@ -112,7 +115,7 @@ Die Home-App spricht über das Apple TV mit Homebridge auf dem Raspberry Pi. Hom
 ## Repository
 
 ```
-firmware/    Flash-Anleitung, Konfiguration und Backups von ESPSomfy-RTS
+firmware/    Arduino-IDE-Anleitung, Konfiguration und Backups von ESPSomfy-RTS
 enclosure/   Gehäuse: STL-Dateien (stl/) und Quelldateien (source/)
 docs/        Anleitungen, Schaltplan, Bilder
   images/    SVG-Grafiken, erzeugt mit generate.py
@@ -122,10 +125,10 @@ Alle Grafiken sind Vektor-SVGs und passen sich dem hellen bzw. dunklen GitHub-De
 
 ## Credits
 
-Die eigentliche Arbeit steckt in [**ESPSomfy-RTS**](https://github.com/rstrouse/ESPSomfy-RTS) von Robert Strouse und dessen gepflegtem Fork von [**cjkas**](https://github.com/cjkas/ESPSomfy-RTS): Funkprotokoll, Rolling-Code-Verwaltung, Weboberfläche und Positionsverfolgung. Dieses Repo dokumentiert den konkreten Aufbau für eine Somfy-Markise und die Anbindung an Apple Home.
+Die eigentliche Arbeit steckt in [**ESPSomfy-RTS**](https://github.com/rstrouse/ESPSomfy-RTS) von Robert Strouse: Funkprotokoll, Rolling-Code-Verwaltung, Weboberfläche und Positionsverfolgung. Weiterentwickelt wird es im Fork von [**cjkas**](https://github.com/cjkas/ESPSomfy-RTS), der allerdings PlatformIO statt der Arduino IDE voraussetzt. Dieses Repo dokumentiert den konkreten Aufbau für eine Somfy-Markise und die Anbindung an Apple Home.
 
 ## Lizenz
 
-Dokumentation, Grafiken und Gehäusedateien dieses Repos stehen unter der [MIT-Lizenz](LICENSE). ESPSomfy-RTS selbst steht unter [The Unlicense](https://github.com/cjkas/ESPSomfy-RTS/blob/main/LICENSE) (gemeinfrei) und wird hier nicht mitgeliefert, sondern aus dem offiziellen Release geflasht.
+Dokumentation, Grafiken und Gehäusedateien dieses Repos stehen unter der [MIT-Lizenz](LICENSE). ESPSomfy-RTS selbst steht unter [The Unlicense](https://github.com/rstrouse/ESPSomfy-RTS/blob/main/LICENSE) (gemeinfrei) und wird hier nicht mitgeliefert, sondern aus dem Original-Repository kompiliert.
 
 Somfy, RTS und Telis sind Marken der Somfy SAS. Dieses Projekt steht in keiner Verbindung zu Somfy.

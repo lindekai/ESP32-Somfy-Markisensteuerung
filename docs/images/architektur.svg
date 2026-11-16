@@ -28,6 +28,6 @@
   <path d="M990 265 H840.0 V184" fill="none" style="stroke:var(--accent)" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"/><path d="M834.0 186 L840.0 174 L846.0 186 Z" style="fill:var(--accent)"/><text x="828.0" y="252" text-anchor="end" font-size="12" style="fill:var(--accent)" font-weight="700">ESPSomfy-RTS hört mit,</text><text x="828.0" y="270" text-anchor="end" font-size="12" style="fill:var(--accent)" font-weight="700">Position bleibt aktuell</text>
   <text x="240.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--fg)">HomeKit</text><text x="240.0" y="192" text-anchor="middle" font-size="10" class="muted">WLAN</text>
   <text x="480.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--fg)">HomeKit (HAP)</text><text x="480.0" y="192" text-anchor="middle" font-size="10" class="muted">WLAN</text>
-  <text x="720.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--fg)">HTTP + WebSocket</text><text x="720.0" y="192" text-anchor="middle" font-size="10" class="muted">WLAN · Port 80</text>
+  <text x="720.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--fg)">HTTP + WebSocket</text><text x="720.0" y="192" text-anchor="middle" font-size="10" class="muted">WLAN · Port 8081/8080</text>
   <text x="960.0" y="46" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--blue)">Somfy RTS</text><text x="960.0" y="192" text-anchor="middle" font-size="10" class="muted">433,42 MHz</text>
 </svg>
